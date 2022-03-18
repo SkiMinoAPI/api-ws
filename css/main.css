@@ -75,6 +75,9 @@ main img {
     font-size: 25px;
     color: white;
 }
+.e2 .apilist {
+    border-radius: 5px;
+}
 
 .left {
     float: right;
