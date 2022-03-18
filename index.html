@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+        <title>SkiMino API</title>
+        <link rel="stylesheet" href="./css/main.css" type="text/css" />
+        <link rel="stylesheet" href="./css/buttons.css" type="text/css" />
+        <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+        <style>
+            .fusr {
+                position: fixed;
+                height: 100vh;
+                width: 100vw;
+                background-color: white;
+                text-align: center;
+                top: 45vh;
+                z-index: 2000;
+            }
+        </style>
+    </head>
+    <body>
+        <noscript>
+            <div class="fusr">
+                <h1>请启用JavaScript。</h1>
+                <span>Please enable the JavaScript.</span>
+            </div>
+        </noscript>
+        <div class="ns" style="display: none;">
+            <div class="fusr loading">
+                <h1>Loading...</h1>
+                <span>加载中...</span>
+            </div>
+
+            <header>
+                <div class="coner">
+                    <h1 class="hdti">SkiMino API</h1>
+                    <h3 class="left">
+                        <a href="//lolimapis.ml/license/"><ion-icon name="information-circle-outline"></ion-icon></ion-icon>协议</a>&nbsp;&nbsp;
+                        <a href="//docs.lolimapis.ml/API/"><ion-icon name="globe"></ion-icon>Docs</a>
+                    </h3>
+                </div>
+            </header>
+
+            <main>
+                <div class="card e1">
+                    <div class="coner">
+                        <hsd>公告栏</hsd>
+                        <div id="lbg"></div>
+                    </div>
+                    <div class="btns">
+                        <a href="//docs.lolimapis.ml/API/" class="button" style="background-color: #0088ff; color: white;">文档</a>
+                        <a href="//github.com/SkiMinoTeam/API" class="button" style="background-color: black; color: white;">开源地址</a><br />
+                        <span>&nbsp;</span>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </body>
+    <script>
+        document.querySelector('.ns').style.display = "";
+        window.onload = document.querySelector('.loading').style.display = "none";
+    </script>
+</html>
