@@ -16,7 +16,6 @@
                 width: 100vw;
                 background-color: white;
                 text-align: center;
-                top: 45vh;
                 z-index: 2000;
             }
         </style>
@@ -30,8 +29,10 @@
         </noscript>
         <div class="ns" style="display: none;">
             <div class="fusr loading">
-                <h1>Loading...</h1>
-                <span>加载中...</span>
+                <div style="margin-top: 45vh">
+                    <h1>Loading...</h1><br />
+                    <span>加载中...</span>
+                </div>
             </div>
 
             <header>
@@ -58,12 +59,19 @@
                         <span>&nbsp;</span>
                     </div>
                 </div>
+                <div class="card">
+                    <img src="https://fs.lolimapis.ml/BingImage/" />
+                </div>
             </main>
         </div>
     </body>
     <script>
         document.querySelector('.ns').style.display = "";
-        window.onload = document.querySelector('.loading').style.display = "none";
+        if('addEventListener' in document){
+            document.addEventListener('DOMContentLoaded', function() {
+                document.querySelector('.loading').style.display = "none";
+            }, false)
+        }
     </script>
     <script src="./js/main.js"></script>
 </html>

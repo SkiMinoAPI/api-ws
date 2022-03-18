@@ -3,14 +3,13 @@ window.onload = function getAnnouncement() {
     var lbg = document.getElementById('lbg');
     xhr.open("GET", "https://lolimstatic.ml/announcement.md");
     xhr.send();
-    xhr.onreadystatechange = function () {
-        if (xhr.reponseText != undefined) {
+        if (xhr.status = 200) {
             var converter = new showdown.Converter(),
-                text      = xhr.reponseText,
+                text      = xhr.ReponseText,
                 html      = converter.makeHtml(text);
                 lbg.innerHTML = html;
         } else {
             lbg.innerHTML = "获取公告失败！";
         }
-    }
+    
 }
