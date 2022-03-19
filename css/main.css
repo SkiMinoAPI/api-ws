@@ -26,6 +26,8 @@ span, strong {
 header {
     width: 100vw;
     display: flex;
+    top: 0px;
+    position: fixed;
 }
 header h1, header h2, header h3, header h4, header h5, header h6 {
     font-weight: 400;
@@ -43,11 +45,17 @@ header .coner span {
 header .hdti {
     color: rgb(31, 31, 31);
 }
+header a {
+    color: #e783ce;
+}
 
 .card {
     box-shadow: 2px 1px 5px black;
     margin-top: 50px;
     background-color: #ffffff56;
+}
+.e1 {
+    margin-top: 90px;
 }
 main img {
     width: 100%;
