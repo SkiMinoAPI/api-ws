@@ -3,19 +3,19 @@
     padding: 0;
 }
 html {
-    background-size: cover;
     background-repeat: no-repeat;
-    background-position: center center;
+    background-size: cover;
     background-attachment: fixed;
+    /*background-attachment: fixed;*/
 }
 @media screen and (min-width:900px) {
     html {
-        background: url(https://fs.lolimapis.ml/ACGPic/);
+        background-image: url(https://fs.lolimapis.ml/ACGPic/);
     }
 }
 @media screen and (max-width:900px) {
     html {
-        background: url(https://fs.lolimapis.ml/CatFoxGirl/);
+        background-image: url(https://fs.lolimapis.ml/CatFoxGirl/);
     }
 }
 span, strong {
@@ -23,6 +23,7 @@ span, strong {
     font-size: small;
 }
 
+/* Header */
 header {
     width: 100vw;
     display: flex;
@@ -46,9 +47,10 @@ header .hdti {
     color: rgb(31, 31, 31);
 }
 header a {
-    color: #e783ce;
+    color: #1da886;
 }
 
+/* Main */
 .card {
     box-shadow: 2px 1px 5px black;
     margin-top: 50px;
@@ -87,6 +89,15 @@ main img {
     border-radius: 5px;
 }
 
+/* Footer */
+footer {
+    width: 100vw;
+    padding: 15px;
+    text-align: center;
+    background-color: #00000067;
+}
+
+/* Other */
 .left {
     float: right;
     font-size: 20px;
@@ -138,4 +149,11 @@ ion-icon {
 }
 .descs {
     margin: 5px;
+}
+.moeicp img {
+    height: 15px;
+    transform: translate(0px, 2px);
+}
+.copyright {
+    color: white;
 }
