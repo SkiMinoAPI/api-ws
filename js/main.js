@@ -37,27 +37,29 @@ fetch('https://lolimstatic.ml/counts/apis.json').then(
     (response) => {
         response.json().then((data) => {
             const apiListFrame = document.querySelector('#als');
+            data.forEach(ls => {
             const api = document.createElement('a');
             api.classList.add('btns');
             api.classList.add('button');
             api.classList.add('apilist');
-            var rns = Math.round(Math.random()*10);
-            colors = ["blue","red","white","orange","pink","green","yellow","skyblue","purple","gray"];
-            api.style.background = colors[rns];
+            //var rns = Math.round(Math.random()*10);
+            //colors = ["blue","red","white","orange","pink","green","yellow","skyblue","purple","gray"];
+            //api.style.background = colors[rns];
             api.style.width = '200px';
             var lstd = Math.round(Math.random()*data[0].counts);
             api.href = 'https://docs.lolimapis.ml/API/'+ data[0].list[lstd] +'/';
-            var xhr = new XMLHttpRequest;
-            xhr.open("GET", 'https://lolimstatic.ml/counts/apis/zh.json');
-            xhr.send();
-            xhr.onreadystatechange = function () {
-                if (xhr.readyState = 4) {
-                    const res = xhr.responseText;
-                    lnm = data[0].list[lstd];
-                    api.innerText = res.lnm;
+            lnm = data[0].list[lstd];
+            //var xhr = new XMLHttpRequest;
+            //xhr.open("GET", 'https://lolimstatic.ml/counts/apis/zh.json');
+            //xhr.send();
+            //xhr.onreadystatechange = function () {
+            //    if (xhr.readyState = 4) {
+            //        const res = xhr.responseText;
+                    api.innerText = lnm;
                     apiListFrame.appendChild(api);
-                }
-            }
+            //    }
+            //}
+            })
         })
     }
 )
