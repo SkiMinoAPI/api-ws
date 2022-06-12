@@ -127,9 +127,6 @@ ion-icon {
 #lbg {
     font-family: 'Poppins' sans-serif;
 }
-#lbg ul {
-    transform: translate(20px);
-}
 @media screen and (min-width:900px) {
     #cms > a.item::before {
         content: attr(data-sha);
